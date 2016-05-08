@@ -1,12 +1,10 @@
 var Twitter = require('twitter');
 var fs = require('fs');
 
-
 /* read Keys */
 var keys_buf = fs.readFileSync(".keys");
 var keys_lines = keys_buf.toString().trim();
 var keys = keys_lines.split("\n");
-
 
 /* create Twitter Client */
 var client = new Twitter({
@@ -16,10 +14,8 @@ var client = new Twitter({
 	access_token_secret: keys[3]
 });
 
-
 /* create Tweet */
 var text = "開始の時間となりました。";
-
 
 /* Tweet(Lambda Func) */
 exports.handler = function(event, context) {
