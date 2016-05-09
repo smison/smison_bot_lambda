@@ -2,7 +2,6 @@ var Twitter = require('twitter');
 var here = require('here').here;
 var fs = require('fs');
 
-
 /* define Func */
 function shuffleAry(ary) {
 	var i = ary.length;
@@ -15,19 +14,16 @@ function shuffleAry(ary) {
 	return ary;
 }
 
-
 /* read Themes */
 var buf = fs.readFileSync("themes.txt");
 var lines = buf.toString().trim();
 var themes = lines.split("\n");
 themes = shuffleAry(themes);
 
-
 /* read Keys */
 var keys_buf = fs.readFileSync(".keys");
 var keys_lines = keys_buf.toString().trim();
 var keys = keys_lines.split("\n");
-
 
 /* create Twitter Client */
 var client = new Twitter({
@@ -36,7 +32,6 @@ var client = new Twitter({
 	access_token_key: keys[2],
 	access_token_secret: keys[3]
 });
-
 
 /* create Tweet */
 var text = here(/*
@@ -50,7 +45,6 @@ var text = here(/*
 	.replace(/theme2/, themes[1])
 	.replace(/theme3/, themes[2])
 	.trim();
-
 
 /* Tweet(Lambda Func) */
 exports.handler = function(event, context) {
