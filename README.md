@@ -13,7 +13,7 @@ $ vi .keys
 $ zip -r start.zip start.js node_modules .keys
 $ zip -r end.zip end.js node_modules themes.txt .keys
 
-Upload ZIPs to AWS lambda
+Upload ZIPs to AWS Lambda
   - Role: Basic execution role
   - Event Source: Clowd Watch Events - Schedule
     - start: cron(0 13 * * ? *)
