@@ -15,7 +15,8 @@ $ zip -r end.zip end.js node_modules themes.txt .keys
 
 Upload ZIPs to AWS Lambda
   - Role: Basic execution role
-  - Event Source: Clowd Watch Events - Schedule
+  - Event Source: Clowd Watch Events
+  - Schedule
     - start: cron(0 13 * * ? *)
     - end:   cron(0 14 * * ? *)
    ```
