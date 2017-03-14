@@ -2,7 +2,8 @@
 smison's twitter bot (for AWS Lambda)
 
 - Deploy
-   ```
+
+```
 $ git clone git@github.com:smison/smison_bot_lambda.git
 $ cd smison_bot_lambda
 $ mkdir node_modules
